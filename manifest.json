@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Kinopoisk Watch Movies",
+  "version": "1.0",
+  "description": "Adds button to redirect kinopoisk to watch movies",
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.kinopoisk.ru/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.kinopoisk.ru/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["https://www.kinopoisk.ru/*"]
+    }
+  ]
+}
